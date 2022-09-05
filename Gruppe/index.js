@@ -24,6 +24,7 @@ function updateView() {
 
 //controller
 function answerFunc() {
+    if (inputVal == ''){return}
     let svarInd = inputs.indexOf(inputVal.toLowerCase()) // -1
     if (svarInd == -1) {answer = "i dont understand"}
     else {answer = svar[svarInd]}
@@ -32,6 +33,7 @@ function answerFunc() {
     <div class="inner-text-user">${inputVal}</div>
     <img class="user-img" src="https://www.denofgeek.com/wp-content/uploads/2013/07/288895.jpg?fit=636%2C488" alt="walt">
     </div>`
+    inputVal = ""
     updateView()
     setTimeout(botAnswer, 3000)
 }
@@ -49,4 +51,5 @@ function botAnswer(){
 //     localStorage['page'] = document.URL;
 //     localStorage['scrollTop'] = $(document).scrollTop();
 //   });
+    
     
